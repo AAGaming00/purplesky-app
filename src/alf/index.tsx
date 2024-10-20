@@ -10,7 +10,7 @@ import {
 } from '#/alf/fonts'
 import {createThemes, defaultTheme} from '#/alf/themes'
 import {Theme, ThemeName} from '#/alf/types'
-import {BLUE_HUE, GREEN_HUE, RED_HUE} from '#/alf/util/colorGeneration'
+import {GREEN_HUE, PURPLE_HUE, RED_HUE} from '#/alf/util/colorGeneration'
 import {Device} from '#/storage'
 
 export {atoms} from '#/alf/atoms'
@@ -46,7 +46,7 @@ export const Context = React.createContext<Alf>({
   theme: defaultTheme,
   themes: createThemes({
     hues: {
-      primary: BLUE_HUE,
+      primary: PURPLE_HUE,
       negative: RED_HUE,
       positive: GREEN_HUE,
     },
@@ -96,7 +96,7 @@ export function ThemeProvider({
   const themes = React.useMemo(() => {
     return createThemes({
       hues: {
-        primary: BLUE_HUE,
+        primary: PURPLE_HUE,
         negative: RED_HUE,
         positive: GREEN_HUE,
       },

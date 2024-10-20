@@ -87,6 +87,7 @@ export function isAppLabeler(
     | AppBskyLabelerDefs.LabelerView
     | AppBskyLabelerDefs.LabelerViewDetailed,
 ): boolean {
+  return false
   if (typeof labeler === 'string') {
     return BskyAgent.appLabelers.includes(labeler)
   }

@@ -53,14 +53,14 @@ export const colors = {
   green5: '#082b03',
 
   unreadNotifBg: '#ebf6ff',
-  brandBlue: '#0066FF',
+  brandBlue: '#cba6f7',
   like: '#ec4899',
 }
 
 export const gradients = {
-  blueLight: {start: '#5A71FA', end: colors.blue3}, // buttons
-  blue: {start: '#5E55FB', end: colors.blue3}, // fab
-  blueDark: {start: '#5F45E0', end: colors.blue3}, // avis, banner
+  blueLight: {start: colors.purple2, end: colors.purple3}, // buttons
+  blue: {start: colors.purple2, end: colors.purple3}, // fab
+  blueDark: {start: colors.purple2, end: colors.purple3}, // avis, banner
 }
 
 export const s = StyleSheet.create({

@@ -14,7 +14,7 @@ import {useNonReactiveCallback} from '../hooks/useNonReactiveCallback'
 import {LogEvents} from './events'
 import {Gate} from './gates'
 
-const SDK_KEY = 'client-SXJakO39w9vIhl3D44u8UupyzFl4oZ2qPIkjwcvuPsV'
+// const SDK_KEY = 'client-SXJakO39w9vIhl3D44u8UupyzFl4oZ2qPIkjwcvuPsV'
 
 type StatsigUser = {
   userID: string | undefined
@@ -271,7 +271,7 @@ export async function tryFetchGates(
 }
 
 export function initialize() {
-  return Statsig.initialize(SDK_KEY, null, createStatsigOptions([]))
+  // return Statsig.initialize(SDK_KEY, null, createStatsigOptions([]))
 }
 
 export function Provider({children}: {children: React.ReactNode}) {
@@ -317,7 +317,7 @@ export function Provider({children}: {children: React.ReactNode}) {
 
   return (
     <GateCache.Provider value={gateCache}>
-      <StatsigProvider
+      {/* <StatsigProvider
         key={did}
         sdkKey={SDK_KEY}
         mountKey={currentStatsigUser.userID}
@@ -327,7 +327,8 @@ export function Provider({children}: {children: React.ReactNode}) {
         waitForInitialization={true}
         options={statsigOptions}>
         {children}
-      </StatsigProvider>
+      </StatsigProvider> */}
+      {children}
     </GateCache.Provider>
   )
 }

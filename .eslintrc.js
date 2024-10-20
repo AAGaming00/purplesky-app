@@ -16,6 +16,9 @@ module.exports = {
     'eslint-plugin-react-compiler',
   ],
   rules: {
+    // purplesky hacks
+    '@typescript-eslint/no-unused-vars': 'warn',
+    'no-unreachable': 'warn',
     // Temporary until https://github.com/facebook/react-native/pull/43756 gets into a release.
     'prettier/prettier': 0,
     'react/no-unescaped-entities': 0,

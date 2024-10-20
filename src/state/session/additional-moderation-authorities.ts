@@ -17,7 +17,8 @@ export const ALL_ADDITIONAL_LABELERS = Object.values(
 export const NON_CONFIGURABLE_LABELERS = [BR_LABELER, DE_LABELER]
 
 export function isNonConfigurableModerationAuthority(did: string) {
-  return NON_CONFIGURABLE_LABELERS.includes(did)
+  return false
+  // return NON_CONFIGURABLE_LABELERS.includes(did)
 }
 
 export function configureAdditionalModerationAuthorities() {

@@ -18,7 +18,7 @@ export async function configureModerationForAccount(
 ) {
   // This global mutation is *only* OK because this code is only relevant for testing.
   // Don't add any other global behavior here!
-  switchToBskyAppLabeler()
+  // switchToBskyAppLabeler()
   if (IS_TEST_USER(account.handle)) {
     await trySwitchToTestAppLabeler(agent)
   }
@@ -38,7 +38,9 @@ export async function configureModerationForAccount(
 }
 
 function switchToBskyAppLabeler() {
-  BskyAgent.configure({appLabelers: [BSKY_LABELER_DID]})
+  // BskyAgent.configure({appLabelers: [BSKY_LABELER_DID]})
+  // nuh uh
+  BskyAgent.configure({appLabelers: []})
 }
 
 async function trySwitchToTestAppLabeler(agent: BskyAgent) {

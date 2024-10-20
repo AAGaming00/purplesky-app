@@ -1,16 +1,16 @@
 import {atoms} from '#/alf/atoms'
 import {Palette, Theme} from '#/alf/types'
 import {
-  BLUE_HUE,
   defaultScale,
   dimScale,
   GREEN_HUE,
+  PURPLE_HUE,
   RED_HUE,
 } from '#/alf/util/colorGeneration'
 
 const themes = createThemes({
   hues: {
-    primary: BLUE_HUE,
+    primary: PURPLE_HUE,
     negative: RED_HUE,
     positive: GREEN_HUE,
   },

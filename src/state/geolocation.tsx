@@ -25,7 +25,7 @@ const onGeolocationUpdate = (
  * additional mod authorities.
  */
 export const DEFAULT_GEOLOCATION: Device['geolocation'] = {
-  countryCode: undefined,
+  countryCode: 'US',
 }
 
 async function getGeolocation(): Promise<Device['geolocation']> {
@@ -65,11 +65,11 @@ export function beginResolveGeolocation() {
    * In dev, IP server is unavailable, so we just set the default geolocation
    * and fail closed.
    */
-  if (IS_DEV) {
-    geolocationResolution = new Promise(y => y())
-    device.set(['geolocation'], DEFAULT_GEOLOCATION)
-    return
-  }
+  // if (IS_DEV) {
+  geolocationResolution = new Promise(y => y())
+  device.set(['geolocation'], DEFAULT_GEOLOCATION)
+  return
+  // }
 
   geolocationResolution = new Promise(async resolve => {
     try {

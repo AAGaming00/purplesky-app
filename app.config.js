@@ -63,19 +63,19 @@ module.exports = function (config) {
   return {
     expo: {
       version: VERSION,
-      name: 'Bluesky',
+      name: 'Purplesky',
       slug: 'bluesky',
       scheme: 'bluesky',
-      owner: 'blueskysocial',
+      owner: 'aagaming',
       runtimeVersion: {
         policy: 'appVersion',
       },
       orientation: 'portrait',
       icon: './assets/icon.png',
       userInterfaceStyle: 'automatic',
-      splash: SPLASH_CONFIG,
+      splash: DARK_SPLASH_CONFIG,
       // hsl(211, 99%, 53%), same as palette.default.brandText
-      primaryColor: '#1083fe',
+      primaryColor: '#cba6f7',
       ios: {
         supportsTablet: false,
         bundleIdentifier: 'xyz.blueskyweb.app',

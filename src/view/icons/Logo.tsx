@@ -24,7 +24,9 @@ export const Logo = React.forwardRef(function LogoImpl(props: Props, ref) {
   const {fill, ...rest} = props
   const gradient = fill === 'sky'
   const styles = StyleSheet.flatten(props.style)
-  const _fill = gradient ? 'url(#sky)' : fill || styles?.color || colors.blue3
+  const _fill = gradient
+    ? 'url(#sky)'
+    : fill || styles?.color || colors.brandBlue
   // @ts-ignore it's fiiiiine
   const size = parseInt(rest.width || 32)
 
@@ -57,8 +59,8 @@ export const Logo = React.forwardRef(function LogoImpl(props: Props, ref) {
       {gradient && (
         <Defs>
           <LinearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-            <Stop offset="0" stopColor="#0A7AFF" stopOpacity="1" />
-            <Stop offset="1" stopColor="#59B9FF" stopOpacity="1" />
+            <Stop offset="0" stopColor="#ba85ff" stopOpacity="1" />
+            <Stop offset="1" stopColor="#9747ff" stopOpacity="1" />
           </LinearGradient>
         </Defs>
       )}

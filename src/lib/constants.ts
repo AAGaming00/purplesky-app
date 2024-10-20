@@ -3,9 +3,9 @@ import {AppBskyActorDefs} from '@atproto/api'
 
 export const LOCAL_DEV_SERVICE =
   Platform.OS === 'android' ? 'http://10.0.2.2:2583' : 'http://localhost:2583'
-export const STAGING_SERVICE = 'https://staging.bsky.dev'
-export const BSKY_SERVICE = 'https://bsky.social'
-export const PUBLIC_BSKY_SERVICE = 'https://public.api.bsky.app'
+export const STAGING_SERVICE = 'https://aagaming.me'
+export const BSKY_SERVICE = 'https://aagaming.me'
+export const PUBLIC_BSKY_SERVICE = 'https://aagaming.me'
 export const DEFAULT_SERVICE = BSKY_SERVICE
 const HELP_DESK_LANG = 'en-us'
 export const HELP_DESK_URL = `https://blueskyweb.zendesk.com/hc/${HELP_DESK_LANG}`
@@ -82,7 +82,7 @@ export function LINK_META_PROXY(serviceUrl: string) {
   return STAGING_LINK_META_PROXY
 }
 
-export const STATUS_PAGE_URL = 'https://status.bsky.app/'
+export const STATUS_PAGE_URL = 'https://status.aagaming.me/'
 
 // Hitslop constants
 export const createHitslop = (size: number): Insets => ({

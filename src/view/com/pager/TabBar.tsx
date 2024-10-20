@@ -3,6 +3,7 @@ import {LayoutChangeEvent, ScrollView, StyleSheet, View} from 'react-native'
 
 import {usePalette} from '#/lib/hooks/usePalette'
 import {useWebMediaQueries} from '#/lib/hooks/useWebMediaQueries'
+import {colors} from '#/lib/styles'
 import {isNative} from '#/platform/detection'
 import {PressableWithHover} from '../util/PressableWithHover'
 import {Text} from '../util/text/Text'
@@ -34,8 +35,8 @@ export function TabBar({
   const itemRefs = useRef<Array<Element>>([])
   const [itemXs, setItemXs] = useState<number[]>([])
   const indicatorStyle = useMemo(
-    () => ({borderBottomColor: indicatorColor || pal.colors.link}),
-    [indicatorColor, pal],
+    () => ({borderBottomColor: indicatorColor || colors.brandBlue}),
+    [indicatorColor],
   )
   const {isDesktop, isTablet} = useWebMediaQueries()
   const styles = isDesktop || isTablet ? desktopStyles : mobileStyles
